@@ -123,7 +123,7 @@ find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/view/v2ray_server/*.htm
 
 #修改jdc ax1800 pro 的内核大小为12M
-sed -i "/^define Device\/jdcloud_ax1800-pro/,/^endef/ { /KERNEL_SIZE := 6144k/s//KERNEL_SIZE := 12288k/ }" target/linux/qualcommax/image/ipq60xx.mk
+# sed -i "/^define Device\/jdcloud_ax1800-pro/,/^endef/ { /KERNEL_SIZE := 6144k/s//KERNEL_SIZE := 12288k/ }" target/linux/qualcommax/image/ipq60xx.mk
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
